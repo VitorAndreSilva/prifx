@@ -1,0 +1,38 @@
+<html>
+ <head>
+   <title>GeoLox - Latitude e Longitude</title>
+   <link rel="stylesheet" href="latLong.css" />
+ </head>
+ <body>
+   <h1>GeoLox</h1>
+   <section>
+    <h3>Latitude e Longitude</h3>
+    <p>Receba dados de latitude e longitude e saiba como obtê-los!</p>
+    <div id="resultado"></div>
+    <script>
+     const latitude = Number(prompt("Informe a latitude da localizção desejada:"));
+     const longitude = Number(prompt("Informe a longitude da localizção desejada:"));
+     if (latitude>0, longitude>0) {
+      document.getElementById('resultado').innerHTML = 
+      "Você está localizado no Hemisfério Norte e no Hemisfério Oriental."
+     } else if (latitude<0, longitude<0) {
+      document.write(`Você está localizado no Hemisfério Sul e no Hemisfério Ocidental.`);
+     } else if (latitude<0, longitude>0) {
+      document.write(`Você está localizado no Hemisfério Sul e no Hemisfério Oriental.`);
+     } else if (latitude>0, longitude<0) {
+      document.write(`Você está localizado no Hemisfério Norte e no Hemisfério Ocidental.`);
+     } else if (latitude = 0, longitude>0) {
+      document.write(`Você está localizado na Linha do Equador e no Hemisfério Oriental.`);
+     } else if (latitude = 0, longitude<0) {
+      document.write(`Você está localizado na Linha do Equador e no Hemisfério Ocidental.`);
+     } else if (latitude>0, longitude = 0) {
+      document.write(`Voê está localizado no Hemisfério Norte e no Meridiano de Greenwich`);
+     } else if (latitude<0, longitude = 0) {
+      document.write(`Voê está localizado no Hemisfério Sul e no Meridiano de Greenwich`);
+     } else {
+      document.write(`Você está no centro do mapa do planeta Terra.`);
+     }
+    </script>
+   </section>
+ </body>
+</html>
